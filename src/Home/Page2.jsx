@@ -1,51 +1,22 @@
 import React from 'react';
-import { OverPack } from 'rc-scroll-anim';
 import QueueAnim from 'rc-queue-anim';
-import { Button } from 'antd';
+import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 
-function Page2() {
+export default function Page2() {
   return (
-    <div className="home-page page2">
-      <div className="home-page-wrapper">
-        <div className="title-line-wrapper page2-line">
-          <div className="title-line" />
-        </div>
-        <h2>Let’s <span>Pro</span></h2>
-        <OverPack>
-          <QueueAnim key="queue" type="bottom" leaveReverse className="page2-content">
-            <p key="p" className="page-content">
-              命令行运行下列命令，快速启动开发服务：
-            </p>
-            <div key="code1" className="home-code">
-              <div>
-                $ <span>git clone</span> git@github.com:ant-design/ant-design-pro.git --depth=1
-              </div>
-              <div>$ cd ant-design-pro</div>
-              <div>$ npm install</div>
-              <div>
-                $ npm start
-                <span className="home-code-comment">
-                  // 打开浏览器访问 http://localhost:8000
-                </span>
-              </div>
-            </div>
-            <p key="p2" className="page-content">
-              需要帮助？请先阅读
-              <a> 开发文档 </a>
-              和
-              <a> 常见问题 </a>， 如果未能解决，可以到 GitHub 上
-              <a href="https://github.com/ant-design/ant-design-pro/issues"> 进行提问 </a>。
-            </p>
-            <div key="button" style={{ marginTop: 88 }}>
-              <a href="http://github.com/ant-design/ant-design-pro" target="_blank" rel="noopener noreferrer">
-                <Button type="primary">下载 Pro</Button>
-              </a>
-            </div>
-          </QueueAnim>
-        </OverPack>
-      </div>
-    </div>
-  );
+    <OverPack component="section" className="page-wrapper page2">
+      <QueueAnim
+        type="bottom"
+        className="page text-center"
+        leaveReverse
+        key="page"
+      >
+        <h2 key="title">AntV 可视化解决方案</h2>
+        <span key="line" className="separator" />
+        <QueueAnim type="bottom" className="info-content" key="content">
+          <p className="main-info" key="1">已全面全新升级，主要包含 G2、G6、F2 以及一套完整的图表使用和设计规范。</p>
+          <p className="main-info" key="2">得益于丰富的业务场景和用户需求挑战，AntV 经历多年积累与不断打磨，已支撑整个阿里集团内外 2000+ 业务系统，通过了百万级 UV 产品的严苛考验后方敢与君见。</p>
+        </QueueAnim>
+      </QueueAnim>
+    </OverPack>);
 }
-
-export default Page2;

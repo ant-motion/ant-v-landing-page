@@ -1,78 +1,44 @@
-@import './default.less';
-@import "~antd/lib/style/mixins/clearfix.less";
-
-@header-height: 80px;
-
-#header {
-  background-color: #fff;
-  position: relative;
-  z-index: 10;
+header {
+  position: fixed;
+  z-index: 1000;
   height: 64px;
-}
-
-#logo {
-  overflow: hidden;
-  padding-left: 40px;
-  float: left;
-  line-height: 64px;
-  text-decoration: none;
-  height: 64px;
-  img {
-    display: inline;
-    vertical-align: middle;
-    margin-right: 16px;
-    width: 32px;
+  padding: 0 32px;
+  width: 100%;
+  background: #F8FAFE;
+  transition: box-shadow .3s ease-out, background .3s ease-out;
+  &.show-shadow{
+    background: #FDFDFD;
+    box-shadow: 0 2px 8px rgba(229, 229, 229, 0.5);
   }
-  span {
-    color: @primary-color;
-    outline: none;
-    font-size: 14px;
-    line-height: 28px;
-  }
-}
-
-.header-meta {
-  .clearfix();
-  padding-right: 40px;
-}
-
-#menu {
-  float: right;
-  overflow: hidden;
-  height: 64px;
-  .ant-menu {
-    line-height: 60px;
-  }
-  .ant-menu-horizontal {
-    border-bottom: none;
-    & > .ant-menu-item {
-      border-top: 2px solid transparent;
-      &:hover {
-        border-top: 2px solid @primary-color;
-        border-bottom: 2px solid transparent;
-      }
-    }
-    & > .ant-menu-item-selected {
-      border-top: 2px solid @primary-color;
-      border-bottom: 2px solid transparent;
-      a {
-        color: @primary-color;
+  .logo {
+    background: url(https://gw.alipayobjects.com/zos/rmsportal/sDUzcQUsFXjBgcHNCuiv.svg) no-repeat center;
+    display: inline-block;
+    width: 40px;
+    height: 64px;
+    &-wrapper {
+      display: inline-block;
+      height: 100%;
+      line-height: 64px;
+      span {
+        line-height: 64px;
+        font-size: 20px;
+        margin-right: 18px;
+        white-space: nowrap;
+        color: rgba(0,0,0,.9);
+        display: inline-block;
+        vertical-align: top;
       }
     }
   }
-}
-
-#preview {
-  padding-top: 17px;
-  float: right;
-  margin-left: 32px;
-  button {
-    border-radius: 32px;
-  }
-}
-
-#preview-button {
-  .ant-btn {
-    color: @site-text-color;
+  .button{
+    float: right;
+    height: 100%;
+    line-height: 64px;
+    .ant-btn{
+      border-radius: 32px;
+      font-size: 14px;
+      line-height: 32px;
+      height: 32px;
+    }
   }
 }
