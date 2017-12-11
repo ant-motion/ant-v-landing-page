@@ -1,12 +1,12 @@
-### ant desing pro
+### ant v
 
-ant desing pro 里的 landing page. 
+ant v 里的 landing page. 
 
 脚手架使用的是： [antd-init](https://github.com/ant-design/antd-init);
 
 ## preview
 
-https://pro.ant.design
+https://antv.alipay.com/zh-cn/index.html
 
 https://ant-motion.github.io/ant-design-pro-landing-page/
 
