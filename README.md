@@ -8,7 +8,7 @@ ant v 里的 landing page.
 
 https://antv.alipay.com/zh-cn/index.html
 
-https://ant-motion.github.io/ant-design-pro-landing-page/
+https://ant-motion.github.io/ant-v-landing-page/
 
 
 ## install
